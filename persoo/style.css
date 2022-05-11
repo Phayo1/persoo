@@ -1,0 +1,475 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h2{
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+  margin-bottom: 24.14px;
+}
+h4{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000; 
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #ebead5;
+}
+header {
+  height: 80px;
+  background-color: #CA406A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header input{
+  width: 465px;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  padding-right:10px;
+}
+#cart{
+  width: 32px;
+  position: absolute;
+  right: 20%;
+  cursor: pointer;
+}
+#cart .number{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #AC365A;
+  text-align: center;
+  top:-9px;
+  right: -9px;
+  display: none;
+}
+#cart .number p{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+.cart-content{
+  position: absolute;
+  right: 18%;
+  top:108px;
+  z-index: 100;
+  background: white;
+  border-radius: 25px;
+  padding: 28px 22px 24px 30px;
+  width: 381px;
+  display: none;
+}
+.cart-content:after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: 40px;
+  height: 0px;
+  width: 0px;
+  border-bottom: solid 15px white;
+  border-left: solid 15px transparent;
+  border-right: solid 15px transparent;
+}
+.cart-content .checkout{
+  border: 3px solid #3C3C3B;
+  padding: 16px 47px;
+  background-color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.35em;
+  display: inline-block;
+  cursor: pointer;
+  transition: .3s;
+}
+.check-button{
+  text-align: center;
+}
+.checkout:hover{
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.15);
+}
+.product-preview{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 21px;
+  margin-bottom: 44px;
+}
+.image-preview{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  margin-right: 16px;
+}
+.image-preview img{
+  position: absolute;
+  left:-5px;
+  top:0px;
+  width: 60px;
+}
+.product-preview-detail{
+  display: flex;
+}
+.product-preview-detail p{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+.main-content{
+  display: flex;
+  justify-content: center;
+}
+.dropdown-box{
+  background-color: white;
+  margin: 28px;
+  padding: 60px 48px 42px 48px;
+  display: inline-block;
+  border-radius: 25px;
+  width: 1200px;
+}
+.dropdown-box:after {
+  content: "";
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0px;
+  width: 0px;
+  border-bottom: solid 12px white;
+  border-left: solid 12px transparent;
+  border-right: solid 12px transparent;
+}
+.brand-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.brand-box img{
+  opacity: 0.5;
+}
+#asos{
+  width: 82.31px;
+}
+#burberry{
+  width: 113px;
+}
+#columbia{
+  width: 123.85px;
+}
+#seiko{
+  width: 113px;
+}
+#avon{
+  width: 103.85px;
+}
+#cartier{
+  width: 102.31px;
+}
+.choice-box{
+  display: flex;
+}
+.products-list{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 50px;
+}
+.products-list .show-all{
+  border: 3px solid #3C3C3B;
+  padding: 15px 136px 17px 136px;
+  background-color: white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.35em;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: .3s;
+}
+.products-list .show-all:hover{
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.15);
+}
+.product-card{
+  position: relative;
+  width: 30%;
+  height: max-content;
+  margin-top: 22.64px;
+}
+.product-card img{
+  width: 100%;
+  z-index: 1;
+}
+.product-card button{
+  position: absolute;
+  top: 72.89px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 9px 24px;
+  background: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  z-index: 30;
+  border: 2px solid #000000;
+  border-radius: 29px;
+  color: #000000;  
+  cursor: pointer;
+  display: none;
+  transition: ease-in-out .3s;
+}
+.product-card button:hover{
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: ease-in-out .3s;
+}
+.product-card .plus-cart{
+  width: 16px;
+  margin-right: 14px;
+}
+.product-card .description{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  bottom: 30.28px;
+  padding: 10.05px;
+}
+.product-card .box-gradient{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.43) 44.79%, #FFFFFF 79.7%);
+  z-index: 5;
+}
+.red{
+  color: #CA406A;
+}
+.product-card:hover .box-gradient{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.437273) 0%, rgba(255, 255, 255, 0.750787) 0%, #FFFFFF 79.7%);
+}
+.product-card:hover button{
+  display: flex;
+}
+.category-box ul{
+  list-style: none;
+}
+.category-box ul li a{
+  margin-bottom: 16px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;  
+  color: #000000;
+  display: inline-block;
+}
+
+/*media*/
+
+@media only screen and (max-width: 1200px) {
+  header{
+    justify-content: start;
+    padding:5%;
+  }
+  header input{
+    width: 80%;
+  }
+  #asos,
+  #burberry,
+  #columbia,
+  #seiko,
+  #avon,
+  #cartier{
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  .brand-box{
+    margin-bottom: 10px;
+  }
+
+  #cart{
+    right:5%;
+  }
+  .dropdown-box{
+    width: 90%;
+    padding: 20px;
+  }
+  .choice-box{
+    flex-wrap: wrap;
+  }
+  .products-list{
+    padding-left: 0;
+  }
+  .product-card{
+    width: 50%;
+  }
+  .product-card .box-gradient{
+    left:-1px;
+    width: 102%;
+  }
+  .products-list .show-all{
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+  }
+  .cart-content{
+    right: 5%;
+    width: 90%;
+  }
+  .cart-content:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    height: 0px;
+    width: 0px;
+    border-bottom: solid 15px transparent;
+    border-left: solid 15px transparent;
+    border-top: solid 15px transparent;
+    border-right: solid 15px white;
+  }
+  .dropdown-box:after{
+    top:121px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header{
+    justify-content: start;
+    padding:5%;
+  }
+  header input{
+    width: 80%;
+    text-align: left;
+    padding-left: 20px;
+  }
+  #asos,
+  #burberry,
+  #columbia,
+  #seiko,
+  #avon,
+  #cartier{
+    width: 88px;
+    margin-bottom: 10px;
+  }
+  .brand-box{
+    margin-bottom: 10px;
+  }
+
+  #cart{
+    right:5%;
+  }
+  .dropdown-box{
+    width: 90%;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .dropdown-box:after{
+    top:90px;
+  }
+  .choice-box{
+    flex-wrap: wrap;
+  }
+  .products-list{
+    padding-left: 0;
+  }
+  .product-card{
+    width: 100%;
+  }
+  .product-card .box-gradient{
+    left:-1px;
+    width: 102%;
+  }
+  .products-list .show-all{
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+  }
+  .cart-content{
+    right: 5%;
+    width: 90%;
+  }
+  .cart-content:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    height: 0px;
+    width: 0px;
+    border-bottom: solid 15px transparent;
+    border-left: solid 15px transparent;
+    border-top: solid 15px transparent;
+    border-right: solid 15px white;
+  }
+  .choice-box{
+    justify-content: center;
+  }
+  .category-box{
+    text-align: center;
+  }
+  .category-box h2{
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .category-box ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .category-box ul li{
+    margin: 10px;
+  }
+}
+@media only screen and (min-width: 1921px){
+  #cart{
+    right:27%;
+  }
+  .cart-content{
+    right: 26%;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 769px) {
+  .choice-box{
+    justify-content: center;
+  }
+  .category-box{
+    text-align: center;
+  }
+  .category-box h2{
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .category-box ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .category-box ul li{
+    margin: 10px;
+  }
+  .product-card{
+    width:48%;
+  }
+}
